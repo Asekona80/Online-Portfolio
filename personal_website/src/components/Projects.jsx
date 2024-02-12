@@ -5,6 +5,16 @@ import Slider from 'react-slick'
 
 
 const Projects = () => {
+    const settings={
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+
+    }
   return (
     <div  className='w-full bg-[#FBE4FF] py-16 px-4'>
         <div className='max-w-[1240px] mx-auto'>

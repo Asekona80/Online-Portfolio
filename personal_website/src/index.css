@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body{
-  background: repeating-linear-gradient( #E0DBFF, #E2FFBE, #FBE4FF,#FFC5A5, #FFE5E5, #FFFFFF);
+  background: repeating-radial-gradient( #ddd8fc, hsl(87, 81%, 90%), #FBE4FF,#FFC5A5, #FFE5E5, #FFFFFF);
     font-family: 'Poppins', sans-serif;
 }
 /* animation style*/

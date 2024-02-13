@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-200 py-8">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
-        <div className="flex items-center  lg:justify-start mb-4 lg:mb-0 "> {/* Center the content */}
+        <div className="flex lg:justify-start mb-4 lg:mb-0 ">
           <img src={Logo} alt='Logo' className='w-[95px] h-10 ml-4' />
         </div>
         <div>
@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center">
-          <a href="/" className="text-black mr-4"><FaArrowAltCircleUp className="text-black mr-1" /></a>
+          <a href="/" className="text-black mr-4"><FaArrowAltCircleUp className="text-black mr-1 w-50 " /></a>
         </div>
       </div>
     </footer>

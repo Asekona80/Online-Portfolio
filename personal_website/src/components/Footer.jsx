@@ -7,8 +7,10 @@ const Footer = () => {
     <footer className="bg-gray-200 py-8">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="flex items-center  lg:justify-start mb-4 lg:mb-0 "> {/* Center the content */}
-          <img src={Logo} alt='Logo' className='w-[95px] h-10 mr-4' />
-          <p className="text-black flex items-center justify-center">© 2024 Asekona xanywa</p>
+          <img src={Logo} alt='Logo' className='w-[95px] h-10 ml-4' />
+        </div>
+        <div>
+        <p className="text-black flex items-center justify-center">© 2024 Asekona xanywa</p>
         </div>
 
         <div className="flex items-center">

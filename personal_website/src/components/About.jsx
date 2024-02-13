@@ -20,15 +20,15 @@ const About = () => {
   <div className='w-[300px] items-center justify-center'>
     {/* Skill 1 */}
     <div className='bg-white p-1 rounded-md mb-3'>
-      <p className='text-center'>JAVA</p>
+      <p className='text-center '>JAVA</p>
     </div>
     {/* Skill 2 */}
     <div className='bg-white p-1 rounded-md mb-3'>
-      <p className='text-center'>REACT</p>
+      <p className='text-center '>REACT</p>
     </div>
     {/* Skill 3 */}
     <div className='bg-white p-1 rounded-md mb-3'>
-      <p className='text-center'>TAILWIND CSS</p>
+      <p className='text-center '>TAILWIND CSS</p>
     </div>
     {/* Skill 4 */}
     <div className='bg-white p-1 rounded-md mb-3'>
@@ -43,7 +43,7 @@ const About = () => {
       <p className='text-center'>CSS3</p>
     </div>
     {/* Skill 7 */}
-    <div className='bg-white p-1 rounded-md mb-3'>
+    <div className='bg-white p-1 rounded-md mb-3 '>
       <p className='text-center'>MySQL</p>
     </div>
     {/* Skill 8 */}

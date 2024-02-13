@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="flex items-center mb-4 lg:mb-0">
           <img src={Logo} alt="Logo" className="h-8 mr-2" />
-          <p className="text-white">© 2024 Your Company Name</p>
+          <p className="text-black">© 2024 Asekona xanywa</p>
         </div>
         <div className="flex items-center">
-          <a href="/" className="text-white mr-4"><FaHome className="mr-1" /> Back to Home</a>
+          <a href="/" className="text-white mr-4"><FaHome className="mr-1" /></a>
         </div>
       </div>
     </footer>

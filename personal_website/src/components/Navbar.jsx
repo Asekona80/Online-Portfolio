@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
         <div className={!Nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-violet-200 bg-[#ffffff] ease-in-out duration-500' :' fixed left-[-100%]'}>
         <div className='w-full'>
-  <img src={logo} alt='Logo' className='w-[95px] h-10' />
+  <img src={logo} alt='Logo' className='w-[95px] h-10 ' />
          </div>
 
           <ul className=' uppercase p-3' >

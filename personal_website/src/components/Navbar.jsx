@@ -17,7 +17,7 @@ const Navbar = () => {
     
    <div className='flex justify-between items-center h-24 max-w[120px] mx-auto px-4 text-black font-semibold'> 
     <div className='w-full'>
-  <img src={logo} alt='Logo' className='w-[95px] h-10' />
+  <img src={logo} alt='Logo' className='w-[95px] h-10 ml-5' />
 </div>
 <ul className='hidden md:flex' onClick={workNav}>
   <Link to='/home' className='hover:text-violet-400 transition-colors duration-300'>

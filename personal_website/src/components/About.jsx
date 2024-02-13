@@ -14,7 +14,7 @@ const About = () => {
               <p>Meet Asekona Xanywa, a dynamic Junior Software Developer with a diploma in Application Development from Walter Sisulu University. Specializing in both software development and cybersecurity, my success in hackathons reflects practical experience, shaping me into a seasoned professional ready to contribute to the dynamic tech landscape.</p>
             </div>
           </div>
-          <div className='bg-[#FFE2AB] rounded-lg shadow-x2 p-6'>
+          <div className='bg-[#FFE2AB] rounded-lg shadow-xl p-6'>
   {/* container 2 */}
   <h2 className='text-xl font-normal mb-4 text-center'>Skills</h2>
   <div className='w-[300px] items-center justify-center'>
@@ -40,7 +40,7 @@ const About = () => {
     </div>
     {/* Skill 6 */}
     <div className='bg-white p-1 rounded-md mb-3'>
-      <p className='text-center'>CSS3</p>
+      <p className='text-center'>CSS3</p> 
     </div>
     {/* Skill 7 */}
     <div className='bg-white p-1 rounded-md mb-3 '>

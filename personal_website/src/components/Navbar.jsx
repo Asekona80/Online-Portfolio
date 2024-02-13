@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className='w-full'>
   <img src={logo} alt='Logo' className='w-[95px] h-10' />
 </div>
-<ul className='hidden md:flex'>
+<ul className='hidden md:flex' onClick={workNav}>
   <Link to='/home' className='hover:text-blue-500 transition-colors duration-300'>
     <li className='p-4'>Home</li>
   </Link>

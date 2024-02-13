@@ -6,6 +6,7 @@ import hero from '../assets/hero.png';
 
 
 const Home = () => {
+
   return (
     <div className='text-black'>
       <div className='max-w-full mt-20 md:mt-10 h-auto max-auto justify-between items-center px-4 flex flex-col md:flex-row mx-10'>

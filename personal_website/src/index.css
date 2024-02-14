@@ -23,7 +23,7 @@ body{
 
 .animate-text-slide {
   animation: slide 6s linear infinite;
-}
+} 
 
   @keyframes slideIn {
     from {

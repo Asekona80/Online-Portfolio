@@ -5,13 +5,12 @@
 @tailwind utilities;
 
 body{
-  background: repeating-radial-gradient( #ddd8fc, hsl(87, 81%, 90%), #FBE4FF,#FFE2AB, #FFE5E5, #FFFFFF);
-    font-family: 'Poppins', sans-serif;
+  background:-webkit-repeating-linear-gradient(#E0DBFF,  #f0fae5,#FBE4FF, #f0c87d, #f8e3e3, #FFFFFF,#FFFFFF)
 }
 /* animation for the text  style*/
 @keyframes slide {
   0% {
-    transform: translateY(0);
+    transform: translateY(0); 
   }
   50% {
     transform: translateY(-100%);

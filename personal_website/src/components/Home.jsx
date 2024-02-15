@@ -48,8 +48,6 @@ const Home = () => {
           <div className='font-bold text-2xl  md:text-3xl sm:text-2xl md:py-6'>
           <span className={`inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden ${animationDelayed ? 'animate-text-slide' : ''}`}>
               <ul className="block animate-text-slide text-left leading-tight">
-                <li > A POSITIVE</li>
-                <li>PASSIONATE </li>
                 <li>JUNIOR SOFTWARE DEVELOPER</li>
               </ul>
             </span>
@@ -59,18 +57,18 @@ const Home = () => {
             <AiFillLinkedin size={25} className='mx-2' />
           </div>
           <div className='flex mt-10'>
-  <p className='font-medium mt-5 flex px-2'>TECH STACK:</p>
-  <div className='flex mt-5 animate-icon-slide'>
-    <FaPython size={25} className='mx-1' />
-    <FaJava size={25} className='mx-1' />
-    <FaReact size={25} className='mx-1' />
-    <SiTailwindcss size={25} className='mx-1' />
-    <FaHtml5 size={25} className='mx-1' />
-    <FaCss3 size={25} className='mx-1' />
-    <SiMysql size={25} className='mx-1' />
-    <SiFirebase size={25} className='mx-1' />
-  </div>
-</div>  
+      <p className='font-medium mt-5 flex px-2'>TECH STACK:</p>
+      <div className='flex mt-5 animate-icon-slide'>
+        <FaPython size={25} className='mx-1 bounce-icon' />
+        <FaJava size={25} className='mx-1 bounce-icon' />
+        <FaReact size={25} className='mx-1 bounce-icon' />
+        <SiTailwindcss size={25} className='mx-1 bounce-icon' />
+        <FaHtml5 size={25} className='mx-1 bounce-icon' />
+        <FaCss3 size={25} className='mx-1 bounce-icon' />
+        <SiMysql size={25} className='mx-1 bounce-icon' />
+        <SiFirebase size={25} className='mx-1 bounce-icon' />
+      </div>
+    </div>  
         </div>
         <div className='order-1 md:order-2'>
           <img src={hero} alt='Hero Image' className='h-64 md:h-auto md:w-full object-cover mb' />

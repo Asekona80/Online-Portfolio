@@ -72,7 +72,7 @@ const Home = () => {
     </div>  
         </div>
         <div className='order-1 md:order-2'>
-          <img src={hero} alt='Hero Image' className='h-64 md:h-auto md:w-full object-cover mb' />
+        <img src={hero} alt='Hero Image' className='h-64 md:h-auto md:w-full object-cover mb-4 md:mb-0 float-right md:float-none mr-4 md:mr-0' />
         </div>
       </div>
     </div>

@@ -58,7 +58,7 @@ const About = () => {
             <div className='bg-white p-4 rounded-md'>
               {/* container inside container 3 */}
               <p>CapaCiTi: 2023 July - 2024 January <br />
-              <p className='px-6'>For 6 months, I have been working on projects including: Health service website, Banking application, Game.</p>
+              <p className='px-6'> For 6 months, I worked on projects including: a Health service website, a Banking application, and a Game.</p>
               <p>Younglings 2024 Jan - present</p>
               <p className='px-6'>Currently in a 12 months program as a Junior software developer, I will be creating different real-life projects using various programming languages and frameworks</p> 
               </p>

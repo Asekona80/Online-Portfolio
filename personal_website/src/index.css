@@ -113,7 +113,27 @@ body{
   .floating-bounce {
     animation: floatingBounce 2s ease-in-out infinite;
   }
-
+  floating-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px); 
+    border: 2px solid #FBE4FF; 
+    z-index: -1; 
+    animation: floatBorder 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes floatBorder {
+    from {
+      transform: translateY(0) translateX(0);
+    }
+    to {
+      transform: translateY(-5px) translateX(-5px);
+    }
+  }
+  
 
 
 

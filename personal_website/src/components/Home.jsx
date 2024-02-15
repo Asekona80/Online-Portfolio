@@ -60,14 +60,14 @@ const Home = () => {
           <div className='flex mt-10'>
       <p className='font-medium mt-5 flex px-2'>TECH STACK:</p>
       <div className='flex mt-5 animate-icon-slide'>
-        <FaPython size={25} className='mx-2 floating-bounce' />
+        <FaPython size={25} className='mx-2 floating-bounce python-icon' />
         <FaJava size={25} className='mx-2 floating-bounce' />
-        <FaReact size={25} className='mx-2 floating-bounce' />
-        <SiTailwindcss size={25} className='mx-2 floating-bounce' />
+        <FaReact size={25} className='mx-2 floating-bounce react-icon' />
+        <SiTailwindcss size={25} className='mx-2 floating- tailwind-icon' />
         <FaHtml5 size={25} className='mx-2 floating-bounce' />
         <FaCss3 size={25} className='mx-2 floating-bounce' />
         <SiMysql size={25} className='mx-2 floating-bounce' />
-        <SiFirebase size={25} className='mx-2 floating-bounce' />
+        <SiFirebase size={25} className='mx-2 floating-bounce firebase-icon' />
       </div>
     </div>  
         </div>

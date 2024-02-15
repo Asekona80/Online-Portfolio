@@ -11,6 +11,18 @@ body{
 .linkedin-icon {
   color: blue;
 }
+.python-icon{
+  color:rgb(102, 102, 6);
+}
+.react-icon{
+  color:aqua
+}
+.tailwindcss{
+  color:rgb(87, 68, 104)
+}
+.firebase-icon{
+  color: orange;
+}
 
 /* animation for the text  style*/
 @keyframes slide {

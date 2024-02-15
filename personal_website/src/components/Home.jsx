@@ -63,7 +63,7 @@ const Home = () => {
         <FaPython size={25} className='mx-2 floating-bounce python-icon' />
         <FaJava size={25} className='mx-2 floating-bounce' />
         <FaReact size={25} className='mx-2 floating-bounce react-icon' />
-        <SiTailwindcss size={25} className='mx-2 floating- tailwind-icon' />
+        <SiTailwindcss size={25} className='mx-2 floating-bounce  tailwind-icon' />
         <FaHtml5 size={25} className='mx-2 floating-bounce' />
         <FaCss3 size={25} className='mx-2 floating-bounce' />
         <SiMysql size={25} className='mx-2 floating-bounce' />

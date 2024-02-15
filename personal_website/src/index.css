@@ -5,8 +5,13 @@
 @tailwind utilities;
 
 body{
+  font-family: "Poppins", sans-serif;
   background:-webkit-repeating-linear-gradient(#E0DBFF,  #f0fae5,#FBE4FF,#FFFFFF, #f3d7a4, #f8e3e3, #FFFFFF)
 }
+.linkedin-icon {
+  color: blue;
+}
+
 /* animation for the text  style*/
 @keyframes slide {
   0% {

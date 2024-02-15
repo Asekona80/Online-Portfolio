@@ -54,7 +54,7 @@ const Home = () => {
           </div>
           <div className='flex mt-10 animate-icons'>
       <AiOutlineGithub size={30} className='mx-2' />
-      <AiFillLinkedin size={30} className='mx-2' />
+      <AiFillLinkedin size={30} className='mx-2 linkedin-icon' />
     </div>
 
           <div className='flex mt-10'>

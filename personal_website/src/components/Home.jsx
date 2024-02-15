@@ -43,7 +43,7 @@ const Home = () => {
       <div className='max-w-full mt-20 md:mt-[100px] h-auto max-auto justify-between items-center px-4 flex flex-col md:flex-row mx-10'>
         <div className='order-2 md:order-1 mt-10'>
           <p className='font-italic italic text-xl p-1'>HI THERE</p>
-          <h1 className='font-bold text-2xl md:text-4xl sm:text-3xl md:py-6'>I'M ASEKONA XANYWA</h1>
+          <h1 className='font-bold text-2xl md:text-4xl sm:text-3xl md:py-6 animate-text-slide'>I'M ASEKONA XANYWA</h1>
 
           <div className='font-bold text-2xl  md:text-3xl sm:text-2xl md:py-6'>
           <span className={`inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden ${animationDelayed ? 'animate-text-slide' : ''}`}>
@@ -52,21 +52,22 @@ const Home = () => {
               </ul>
             </span>
           </div>
-          <div className='flex mt-10 '>
-            <AiOutlineGithub size={25} className='mx-2' />
-            <AiFillLinkedin size={25} className='mx-2' />
-          </div>
+          <div className='flex mt-10 animate-icons'>
+      <AiOutlineGithub size={30} className='mx-2' />
+      <AiFillLinkedin size={30} className='mx-2' />
+    </div>
+
           <div className='flex mt-10'>
       <p className='font-medium mt-5 flex px-2'>TECH STACK:</p>
       <div className='flex mt-5 animate-icon-slide'>
-        <FaPython size={25} className='mx-1 bounce-icon' />
-        <FaJava size={25} className='mx-1 bounce-icon' />
-        <FaReact size={25} className='mx-1 bounce-icon' />
-        <SiTailwindcss size={25} className='mx-1 bounce-icon' />
-        <FaHtml5 size={25} className='mx-1 bounce-icon' />
-        <FaCss3 size={25} className='mx-1 bounce-icon' />
-        <SiMysql size={25} className='mx-1 bounce-icon' />
-        <SiFirebase size={25} className='mx-1 bounce-icon' />
+        <FaPython size={25} className='mx-2 floating-bounce' />
+        <FaJava size={25} className='mx-2 floating-bounce' />
+        <FaReact size={25} className='mx-2 floating-bounce' />
+        <SiTailwindcss size={25} className='mx-2 floating-bounce' />
+        <FaHtml5 size={25} className='mx-2 floating-bounce' />
+        <FaCss3 size={25} className='mx-2 floating-bounce' />
+        <SiMysql size={25} className='mx-2 floating-bounce' />
+        <SiFirebase size={25} className='mx-2 floating-bounce' />
       </div>
     </div>  
         </div>

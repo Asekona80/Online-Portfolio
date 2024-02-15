@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body{
-  background:-webkit-repeating-linear-gradient(#E0DBFF,  #f0fae5,#FBE4FF, #f0c87d, #f8e3e3, #FFFFFF,#FFFFFF)
+  background:-webkit-repeating-linear-gradient(#E0DBFF,  #f0fae5,#FBE4FF,#FFFFFF, #f3d7a4, #f8e3e3, #FFFFFF)
 }
 /* animation for the text  style*/
 @keyframes slide {

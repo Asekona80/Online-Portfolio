@@ -20,7 +20,7 @@ const Navbar = () => {
   <img src={logo} alt='Logo' className='w-[95px] h-10 ml-5' />
 </div>
 <ul className='hidden md:flex' onClick={workNav}>
-  <Link to='/home' className='hover:text-violet-400 transition-colors duration-300'>
+  <Link to='/home' className='hover:text-violet-400 transition-colors duration-300 '>
     <li className='p-4'>Home</li>
   </Link>
   <Link to='/about' className='hover:text-violet-400 transition-colors duration-300'>

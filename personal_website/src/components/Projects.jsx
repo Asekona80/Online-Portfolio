@@ -1,56 +1,50 @@
-import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useState } from 'react';
 import Image1 from '../assets/Image1.jpg';
 import Image2 from '../assets/Image2.jpg';
 import Image3 from '../assets/Image3.jpg';
 
 const Projects = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-    centerMode: true,
-    centerPadding: '0px',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
   };
+
   return (
-    <div className='w-full bg-[#f9f7fa] py-16 px-4 h-screen'>
+    <div className='w-full bg-[#f9f7fa] py-16 px-4'>
       <h1 className='text-3xl font-bold mb-8 px-4 text-center'>PROJECT</h1>
-      <Slider {...settings} className="w-full mx-auto">
-        <div className="mx-auto max-w-full transform transition-transform duration-500 hover:scale-105">
-          <img src={Image1} alt="Image1" className="mx-auto max-w-full rounded-md" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="flip-card" onClick={handleFlip}>
+          <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
+            <div className="flip-card-front">
+              <img src={Image1} alt="Image1" className="mx-auto max-w-full rounded-md" />
+            </div>
+            <div className="flip-card-back">
+              <p>Back content for Image 1</p>
+            </div>
+          </div>
         </div>
-        <div className="mx-auto max-w-full transform transition-transform duration-500 hover:scale-105">
-          <img src={Image2} alt="Image2" className="mx-auto max-w-full rounded-md" />
+        <div className="flip-card" onClick={handleFlip}>
+          <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
+            <div className="flip-card-front">
+              <img src={Image2} alt="Image2" className="mx-auto max-w-full rounded-md" />
+            </div>
+            <div className="flip-card-back">
+              <p>Back content for Image 2</p>
+            </div>
+          </div>
         </div>
-        <div className="mx-auto max-w-full transform transition-transform duration-500 hover:scale-105">
-          <img src={Image3} alt="Image3" className="mx-auto max-w-full rounded-md" />
+        <div className="flip-card" onClick={handleFlip}>
+          <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
+            <div className="flip-card-front">
+              <img src={Image3} alt="Image3" className="mx-auto max-w-full rounded-md" />
+            </div>
+            <div className="flip-card-back">
+              <p>Back content for Image 3</p>
+            </div>
+          </div>
         </div>
-      </Slider>
+      </div>
     </div>
   );
 };

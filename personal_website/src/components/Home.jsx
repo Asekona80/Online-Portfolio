@@ -3,9 +3,40 @@ import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 import { FaPython, FaJava, FaReact, FaHtml5, FaCss3 } from "react-icons/fa6";
 import { SiTailwindcss, SiMysql, SiFirebase } from "react-icons/si";
 import hero from '../assets/hero.png';
+import  { useEffect, useState } from 'react';
 
 
 const Home = () => {
+  const [textLoaded, setTextLoaded] = useState([]);
+  const [animationDelayed, setAnimationDelayed] = useState(true);
+  useEffect(() => {
+    const typingDelay = 200; // Delay between each character (in milliseconds)
+    const text = ["A POSITIVE", "PASSIONATE", "JUNIOR SOFTWARE DEVELOPER"];
+    let index = 0;
+    let charIndex = 0;
+     
+    const typingInterval = setInterval(() => {
+      if (charIndex < text[index].length) {
+        charIndex++;
+        setTextLoaded(prevState => [...prevState.slice(0, index), text[index].slice(0, charIndex)]);
+      } else if (index < text.length - 1) {
+        index++;
+        charIndex = 0;
+        setTextLoaded(prevState => [...prevState, ""]);
+      } else {
+        clearInterval(typingInterval);
+        setTextLoaded(prevState => [...prevState, text[index]]);
+        setTimeout(() => {
+          setAnimationDelayed(true);
+        }, 2000); // Delay animation for 2 seconds
+      }
+    }, typingDelay);
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
+
+
 
   return (
     <div className='text-black '>
@@ -15,7 +46,7 @@ const Home = () => {
           <h1 className='font-bold text-2xl md:text-4xl sm:text-3xl md:py-6'>I'M ASEKONA XANYWA</h1>
 
           <div className='font-bold text-2xl  md:text-3xl sm:text-2xl md:py-6'>
-            <span className="inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
+          <span className={`inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden ${animationDelayed ? 'animate-text-slide' : ''}`}>
               <ul className="block animate-text-slide text-left leading-tight">
                 <li > A POSITIVE</li>
                 <li>PASSIONATE </li>

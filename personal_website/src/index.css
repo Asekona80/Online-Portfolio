@@ -21,19 +21,21 @@ body{
 }
 
 .animate-text-slide {
-  animation: slide 6s linear infinite;
+  animation: slideIn 1s linear;
 } 
 
-  @keyframes slideIn {
-    from {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
   }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
   
   .animate-icon-slide .icon {
     animation: slideIn 0.5s forwards;

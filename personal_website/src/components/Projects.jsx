@@ -42,29 +42,29 @@ const Projects = () => {
   return (
     <div className='max-w-[1000px] w-full m-auto py-8 px-4 flex flex-col justify-center items-center'>
       <h1 className="text-3xl font-bold mb-4">PROJECTS</h1>
-      <div className="relative" style={{ height: `${carouselHeight}px`, width: '100%', maxWidth: `${carouselHeight * aspectRatio}px` }}>
+      <div className="relative" style={{ height: `${carouselHeight}px`, width: `${carouselHeight * aspectRatio}px` }}>
         <div
           style={{ backgroundImage: `url(${slide[currentSlide].url})` }}
           className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
         ></div>
-        <div className="absolute bottom-4 w-full flex flex-col md:flex-row justify-between items-center">
+        <div className="absolute bottom-4 w-full flex justify-between items-center">
           <button
             onClick={prevSlide}
-            className='bg-gray-800 text-white px-3 py-1 rounded-full mb-2 md:mb-0'
+            className='bg-gray-800 text-white px-3 py-1 rounded-full'
           >
             <i className="fas fa-chevron-left"></i> Prev
           </button>
-          <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4">
+          <div className="flex space-x-4">
             <a href={slide[currentSlide].github} className="text-gray-600 hover:text-black">
               <AiOutlineGithub size={30}/>
             </a>
-            <a href={slide[currentSlide].demo} className="text-gray-600 hover:text-gray-900">
+            <a href={slide[currentSlide].demo} className="text-gray-600 hover:text-gray-900 px-5">
               <BsBoxArrowInUpRight size={30} />
             </a>
           </div>
           <button
             onClick={nextSlide}
-            className='bg-gray-800 text-white px-3 py-1 rounded-full'
+            className='bg-gray-800 text-white px-3 py-1 rounded-full mb-4'
           >
             Next <i className="fas fa-chevron-right"></i>
           </button>

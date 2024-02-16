@@ -6,7 +6,7 @@ const Contact = () => {
     <div className='w-full bg-white py-16 px-4'>
       <h1 className='text-3xl font-bold mb-8 px-4 text-center'>CONTACT</h1>
       <div className='max-w-4xl mx-auto flex flex-col lg:flex-row'>
-        <div className='bg-white w-full lg:w-2/4 rounded-lg p-8 mb-8 lg:mr-8 shadow-md border border-[#BCB1FF]'>
+        <div className='bg-white w-full lg:w-2/4 rounded-lg p-8 mb-8 lg:mr-8 shadow-md border border-[#7f7d8a]'>
           <form>
             <div className='mb-4'>
               <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='name'>

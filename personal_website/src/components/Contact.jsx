@@ -54,8 +54,9 @@ const Contact = () => {
         <div className="flex flex-col justify-center items-start lg:items-end lg:w-1/4 mt-4 lg:mt-0">
           <FaFileDownload className="text-2xl mb-2 cursor-pointer" />
           <div className="flex items-center mb-2">
-            <FaDiscord className="text-2xl mr-2 cursor-pointer" />
-            <h1 className='flex'>asekona_31187</h1>
+          <a href="asekona_31187" target="_blank" rel="noopener noreferrer">
+            <FaDiscord className="text-2xl  cursor-pointer" />
+             </a>
           </div>
           <a href="https://www.linkedin.com/in/asekona-xanywa-99b655200/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="text-2xl cursor-pointer" />

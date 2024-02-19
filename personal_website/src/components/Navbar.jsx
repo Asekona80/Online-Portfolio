@@ -1,64 +1,35 @@
-import { useState } from 'react'
-import React from 'react'
-import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import logo from '../assets/logo.png'
-import {Link} from 'react-scroll'
-
-
+import React, { useState } from 'react';
+import { AiOutlineMenu, AiOutlineHome } from 'react-icons/ai';
 
 const Navbar = () => {
-  const [Nav, funcNav]=useState(true)
+  const [nav, setNav] = useState(false);
 
-  const workNav=()=>{
-    funcNav(!Nav)
-  }
+  const handleNav = () => {
+    setNav(!nav);
+  };
 
   return (
-    
-   <div className='flex justify-between items-center h-24 max-w[120px] mx-auto px-4 text-black font-semibold'> 
-    <div className='w-full'>
-  <img src={logo} alt='Logo' className='w-[95px] h-10 ml-5' />
-</div>
-<ul className='hidden md:flex' onClick={workNav}>
-  <Link to='/home' className=' transition-colors duration-300 '>
-    <li className='p-4'>Home</li>
-  </Link>
-  <Link to='/about' className='transition-colors duration-300'>
-    <li className='p-4'>AboutMe</li>
-  </Link>
-  <Link to='/projects' className=' transition-colors duration-300'>
-    <li className='p-4'>Projects</li>
-  </Link>
-  <Link to='/contact' className=' transition-colors duration-300 '>
-    <li className='p-4'>Contact</li>
-  </Link>
-</ul>
-        <div onClick={workNav} className='block md:hidden'>
-          {!Nav ? <AiOutlineClose size={20} /> :  <AiOutlineMenu size={20}/>}
+    <div>
+      <AiOutlineMenu onClick={handleNav} className='absolute top-4 right-4 z-[99] md:hidden'/>
+      {
+      nav ? (
+        <div className='fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20'> 
+          <a href="main " className='w-[75%] flex justify-center'>
+            <AiOutlineHome size={20}/>
+            <span className='pl-4'>Home</span>
+          </a>
         </div>
-        <div className={!Nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-violet-200 bg-[#ffffff] ease-in-out duration-500' :' fixed left-[-100%]'}>
-        <div className='w-full'>
-  <img src={logo} alt='Logo' className='w-[95px] h-10 ' />
-         </div>
+      ) :
+      (
+        <div>
 
-          <ul className=' uppercase p-3' >
-          <Link to='Home'>
-        <li className='p-4'>Home</li>
-        </Link>
-        <Link to='About'>
-        <li className='p-4'>AboutMe</li>
-        </Link >
-        <Link to='Projects'>
-        <li className='p-4'>Projects</li>
-        </Link>
-        <Link to='Contact'>
-        <li className='p-4'>Contact</li>
-        </Link>
-          </ul>
         </div>
+
+      )
+      
+      }
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
-
+export default Navbar;

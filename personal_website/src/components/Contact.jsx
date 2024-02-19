@@ -51,7 +51,7 @@ const Contact = () => {
     <div className='w-full py-16 px-4'>
       <h1 className='text-3xl font-bold mb-8 px-4 text-center'>CONTACT</h1>
       <div className='max-w-4xl mx-auto flex flex-col lg:flex-row'>
-      <div className='bg-white w-full lg:w-2/4 rounded-lg p-8 mb-8 lg:mr-8 shadow-md border border-[#ab9dfd] float-right'>
+<div className='bg-white w-full lg:w-2/4 rounded-lg p-8 mb-8 lg:mr-8 shadow-md border border-[#ab9dfd] float-right'>
           <form
             action={FORM_ENDPOINT}
             onSubmit={handleSubmit}

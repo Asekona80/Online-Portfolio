@@ -69,16 +69,16 @@ const Navbar = () => {
         )}
       </div>
       <div className="hidden md:flex items-center">
-        <button onClick={() => scrollToSection('Home')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
+        <button onClick={() => scrollToSection('home')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
           <span className='p-4'>Home</span>
         </button>
-        <button onClick={() => scrollToSection('About')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
+        <button onClick={() => scrollToSection('about')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
           <span className='p-4'>About</span>
         </button>
         <button onClick={() => scrollToSection('projects')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
           <span className='p-4'>Projects</span>
         </button>
-        <button onClick={() => scrollToSection('Contact')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
+        <button onClick={() => scrollToSection('contact')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
           <span className='p-4'>Contact</span>
         </button>
       </div>

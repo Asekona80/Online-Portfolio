@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className='w-full bg-white py-16 px-4 '>
+    <section id="about" className='w-full bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto'>
         <h1 className='text-3xl font-bold mb-8 px-4 text-center mt-8' id='About'>ABOUT ME</h1>
         <div className='grid gap-8 md:grid-cols-3'>
@@ -52,7 +52,7 @@ const About = () => {
               </div>
             </div>
           </div>
-                   <div className='bg-[#D4F9B7] rounded-lg shadow-xl p-6 relative overflow-hidden transition-transform duration-500 ease-in-out hover:scale-105 animate-bounce'>
+          <div className='bg-[#D4F9B7] rounded-lg shadow-xl p-6 relative overflow-hidden transition-transform duration-500 ease-in-out hover:scale-105 animate-bounce'>
             {/*  container 3 */}
             <h2 className='text-xl font-normal mb-4 text-center'>Experience</h2>
             <div className='bg-white p-4 rounded-md'>
@@ -66,7 +66,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

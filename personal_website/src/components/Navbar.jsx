@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`md:flex justify-between items-center mx-auto px-4 text-black font-semibold transition-all duration-500 ease-in-out ${isSticky ? 'sticky top-0 bg-white shadow-md z-50' : 'absolute top-0 w-full'}`}>
+    <div className={`md:flex justify-between items-center mx-auto px-4 text-black font-semibold transition-all duration-500 ease-in-out ${isSticky ? 'sticky top-0 bg-gradient-to-b from-indigo-200 to-[#f0fae5] shadow-md z-50 rounded-b-full' : 'absolute top-0 w-full'}`}>
       <div>
         <img src={logo} alt='Logo' className='w-[95px] h-10' />
       </div>

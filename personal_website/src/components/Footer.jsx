@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center">
-          <a href="/" className="text-black mr-4"><FaArrowAltCircleUp className="text-black mr-1 w-50 " /></a>
+          <a href="/" className="text-black mr-4"><FaArrowAltCircleUp size={30} className="text-black mr-1 w-50 " /></a>
         </div>
       </div>
     </footer>

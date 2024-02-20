@@ -41,10 +41,10 @@ const Navbar = () => {
 
   return (
     <div className={`md:flex justify-between items-center mx-auto px-4 py-4 text-black font-semibold transition-all duration-500 ease-in-out ${isSticky ? 'sticky top-0 bg-gradient-to-b from-indigo-200 to-[#f0fae5] shadow-md z-50 rounded-b-full' : 'absolute top-0 w-full'}`}>
-      {!nav && <div className="hidden md:block"> {/* Conditionally render logo on desktop */}
+      {!nav && <div className="hidden md:block">
         <img src={logo} alt='Logo' className='w-[95px] h-10 ml-4' />
       </div>}
-      <div className="md:hidden flex justify-end mr-4"> {/* Adjust padding and margin */}
+      <div className="md:hidden flex justify-end mr-4">
         <AiOutlineMenu onClick={handleNav} className="text-4xl cursor-pointer p-2" /> 
       </div>
       <div className={`md:hidden ${nav ? 'block fixed inset-0 bg-[#f0fae5] round-full shadow-lg z-50' : 'hidden'}`}> {/* Conditionally render mobile menu items based on 'nav' state */}

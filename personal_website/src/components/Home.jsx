@@ -27,7 +27,7 @@ const Home = () => {
         setTextLoaded(prevState => [...prevState, text[index]]);
         setTimeout(() => {
           setAnimationDelayed(true);
-        }, 2000); // Delay animation for 2 seconds
+        }, 2000); 
       }
     }, typingDelay);
 
@@ -35,7 +35,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className="text-black h-screen flex justify-center items-center">
+    <section id="home" className="text-black">
       <div className="max-w-full mt-20 md:mt-[100px] h-auto max-auto justify-between items-center px-4 flex flex-col md:flex-row mx-10">
         <div className="order-2 md:order-1 mt-10">
           <p className="font-italic italic text-xl p-1">HI THERE</p>
@@ -54,7 +54,8 @@ const Home = () => {
           </div>
 
           <div className="flex mt-10">
-            <p className="font-medium mt-5 px-2 text-xl md:text-2xl sm:text-xl text-center md:text-left md:flex md:items-center md:justify-start">TECH STACK:</p>
+          <p className="font-medium mt-5 px-2 text-xl md:text-2xl sm:text-xl text-center md:text-left md:flex md:items-center md:justify-start whitespace-nowrap">TECH STACK:</p>
+
             <div className="flex mt-5 animate-icon-slide">
               <FaPython size={25} className="mx-2 floating-bounce python-icon" />
               <FaJava size={25} className="mx-2 floating-bounce" />

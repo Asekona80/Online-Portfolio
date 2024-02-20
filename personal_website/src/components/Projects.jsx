@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineGithub } from "react-icons/ai";
-import { BsBoxArrowInUpRight } from "react-icons/bs";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs"; // Import arrow icons
+import { BsBoxArrowInUpRight, BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 const Projects = () => {
   const slide = [
@@ -32,41 +31,41 @@ const Projects = () => {
     setCurrentSlide((currentSlide - 1 + slide.length) % slide.length);
   };
 
-  const carouselHeight = 400;
+  const carouselHeight = '50vh'; // Adjust carousel height as needed
   const aspectRatio = 16 / 9;
 
   return (
-    <div className='max-w-[1000px] bg-grey-200 w-full m-auto py-8 px-4 flex flex-col justify-center items-center'>
+    <section id="projects" className='max-w-[1000px] w-full m-auto py-8 px-4 flex flex-col justify-center items-center'>
       <h1 className="text-3xl font-bold mb-4">PROJECTS</h1>
-      <div className="relative" style={{ height: `${carouselHeight}px`, width: `${carouselHeight * aspectRatio}px` }}>
+      <div className="relative" style={{ height: carouselHeight, width: `calc(${carouselHeight} * ${aspectRatio})` }}>
         <div
-          style={{ backgroundImage: `url(${slide[currentSlide].url})` }}
-          className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+          style={{ backgroundImage: `url(${slide[currentSlide].url})`, paddingBottom: `${(1 / aspectRatio) * 100}%` }}
+          className='absolute inset-0 w-full h-full rounded-2xl bg-center bg-cover duration-500'
         ></div>
         <div className="absolute bottom-4 w-full flex justify-between items-center">
           <button
             onClick={prevSlide}
-            className=' text-white px-3 py-1 '
+            className='text-white px-3 py-1 '
           >
-            <BsChevronLeft size={20} className='mb-[150px]  bg-gray-800 rounded-full'/> {/* Arrow icon for previous */}
+            <BsChevronLeft size={20} className='bg-gray-800 rounded-full'/> {/* Arrow icon for previous */}
           </button>
           <div className="flex space-x-4">
             <a href={slide[currentSlide].github} className="text-gray-600 hover:text-black">
-              <AiOutlineGithub size={30} className='mt-20'/>
+              <AiOutlineGithub size={30} />
             </a>
             <a href={slide[currentSlide].demo} className="text-gray-600 hover:text-gray-900 px-5">
-              <BsBoxArrowInUpRight size={30} className='mt-20' />
+              <BsBoxArrowInUpRight size={30} />
             </a>
           </div>
           <button
             onClick={nextSlide}
-            className='  text-white px-3 py-1 rounded-full mb-4'
+            className='text-white px-3 py-1 rounded-full mb-4'
           >
-            <BsChevronRight size={20}  className='mb-[150px]  bg-gray-800 rounded-full'/> {/* Arrow icon for next */}
+            <BsChevronRight size={20} className='bg-gray-800 rounded-full'/> {/* Arrow icon for next */}
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

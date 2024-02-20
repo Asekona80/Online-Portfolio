@@ -44,24 +44,25 @@ const Navbar = () => {
       <div>
         <img src={logo} alt='Logo' className='w-[95px] h-10' />
       </div>
-      <div className={`md:hidden ${nav ? 'block fixed inset-0 bg-white/90' : 'hidden'}`}>
+      <div className={`md:hidden ${nav ? 'block fixed inset-0 bg-gradient-to-br from-[#f0fae5] to-[#c6e48b] shadow-lg' : 'hidden'}`}>
+
         <AiOutlineMenu onClick={handleNav} className='absolute top-4 right-4 z-[99]' />
         {nav && (
           <div className='flex flex-col justify-center items-center z-20'>
             <img src={logo} alt="Logo" className="w-24 mr-8" />
-            <button onClick={() => scrollToSection('Home')} className='w-[75%] flex justify-center round-full shadow-lg bg-grey-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+            <button onClick={() => scrollToSection('Home')} className='w-[75%] flex justify-center round-full shadow-lg bg-grey-100 shadow-voilet-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:text-gray-900'>
               <AiOutlineHome size={20} />
               <span className='pl-4'>Home</span>
             </button>
-            <button onClick={() => scrollToSection('About')} className='w-[75%] flex justify-center round-full shadow-lg bg-grey-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+            <button onClick={() => scrollToSection('About')} className='w-[75%] flex justify-center round-full shadow-lg bg-grey-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:text-gray-900'>
               <BsPerson size={20} />
               <span className='pl-4'>About Me</span>
             </button>
-            <button onClick={() => scrollToSection('Projects')} className='w-[75%] flex justify-center round-full shadow-lg bg-grey-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+            <button onClick={() => scrollToSection('Projects')} className='w-[75%] flex justify-center round-full shadow-lg bg-grey-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:text-gray-900'>
               <AiOutlineProject size={20} />
               <span className='pl-4'>Projects</span>
             </button>
-            <button onClick={() => scrollToSection('Contact')} className='w-[75%] flex justify-center round-full shadow-lg bg-grey-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+            <button onClick={() => scrollToSection('Contact')} className='w-[75%] flex justify-center round-full shadow-lg bg-grey-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:text-gray-900'>
               <AiOutlineMail size={20} />
               <span className='pl-4'>Contact</span>
             </button>
@@ -69,19 +70,20 @@ const Navbar = () => {
         )}
       </div>
       <div className="hidden md:flex items-center">
-        <button onClick={() => scrollToSection('Home')} className='mr-6'>
-          <span className='p-4'>Home</span>
-        </button>
-        <button onClick={() => scrollToSection('About')} className='mr-6'>
-          <span className='p-4'>About</span>
-        </button>
-        <button onClick={() => scrollToSection('Projects')} className='mr-6'>
-          <span className='p-4'>Projects</span>
-        </button>
-        <button onClick={() => scrollToSection('Contact')} className='mr-6'>
-          <span className='p-4'>Contact</span>
-        </button>
-      </div>
+  <button onClick={() => scrollToSection('Home')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
+    <span className='p-4'>Home</span>
+  </button>
+  <button onClick={() => scrollToSection('About')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
+    <span className='p-4'>About</span>
+  </button>
+  <button onClick={() => scrollToSection('Projects')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
+    <span className='p-4'>Projects</span>
+  </button>
+  <button onClick={() => scrollToSection('Contact')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
+    <span className='p-4'>Contact</span>
+  </button>
+</div>
+
     </div>
   );
 };

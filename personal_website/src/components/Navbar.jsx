@@ -44,7 +44,7 @@ const Navbar = () => {
       <div>
         <img src={logo} alt='Logo' className='w-[95px] h-10' />
       </div>
-      <div className={`md:hidden ${nav ? 'block fixed inset-0 bg-[#f0fae5] rounded-full shadow-lg' : 'hidden'}`}>
+      <div className={`md:hidden ${nav ? 'block fixed inset-0 bg-[#f0fae5] round-full shadow-lg' : 'hidden'}`}>
         <AiOutlineMenu onClick={handleNav} className='absolute top-4 right-4 z-[99]' />
         {nav && (
           <div className='flex flex-col justify-center items-center z-20'>

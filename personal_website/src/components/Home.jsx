@@ -35,8 +35,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='text-black' style={{ background: '-webkit-linear-gradient(to bottom right, #E0DBFF,  #f0fae5,#FBE4FF,#FFFFFF, #f3d7a4, #f8e3e3, #FFFFFF)' }}>
-      <div className='max-w-full mt-20 md:mt-[100px] h-auto max-auto justify-between items-center px-4 flex flex-col md:flex-row mx-10'>
+    <div className='text-black' >
+     <div className='max-w-full mt-20 md:mt-[100px] h-auto max-auto justify-between items-center px-4 flex flex-col md:flex-row mx-10'>
         <div className='order-2 md:order-1 mt-10'>
           <p className='font-italic italic text-xl p-1'>HI THERE</p>
           <h1 className='font-bold text-2xl md:text-4xl sm:text-3xl md:py-6 animate-text-slide'>I'M ASEKONA XANYWA</h1>

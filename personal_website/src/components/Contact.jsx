@@ -48,10 +48,10 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className='w-full py-16 px-4' style={{ background: 'linear-gradient(to bottom, #f0fae5, #FFFFFF)' }}>
+    <section id="contact" className='w-full py-16 px-4 min-h-screen' style={{ background: 'linear-gradient(to bottom, #f0fae5, #FFFFFF)' }}>
       <h1 className='text-3xl font-bold mb-8 px-4 text-center'>CONTACT</h1>
       <div className='max-w-4xl mx-auto flex flex-col lg:flex-row'>
-        <div className='bg-[#FFFFFF] w-full lg:w-2/4 rounded-lg p-8 mb-8 lg:mr-8 shadow-md border border-[#ab9dfd] float-right'>
+        <div className='bg-[#FFFFFF] w-full lg:w-2/4 rounded-lg p-8 mb-16 lg:mr-8 shadow-md border border-[#ab9dfd] float-right'>
           <form
             action={FORM_ENDPOINT}
             onSubmit={handleSubmit}

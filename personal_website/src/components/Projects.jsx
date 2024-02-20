@@ -35,7 +35,7 @@ const Projects = () => {
   const aspectRatio = 16 / 9;
 
   return (
-    <section id="projects" className='max-w-[1000px] w-full m-auto py-8 px-4 flex flex-col justify-center items-center'>
+    <section id="projects" className='max-w-[1000px]  min-h-screen w-full m-auto py-8 px-4 flex flex-col justify-center items-center'>
       <h1 className="text-3xl font-bold mb-4">PROJECTS</h1>
       <div className="relative" style={{ height: carouselHeight, width: `calc(${carouselHeight} * ${aspectRatio})` }}>
         <div

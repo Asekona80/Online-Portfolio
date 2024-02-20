@@ -35,7 +35,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className="text-black">
+    <section id="home" className="text-black h-screen flex justify-center items-center">
       <div className="max-w-full mt-20 md:mt-[100px] h-auto max-auto justify-between items-center px-4 flex flex-col md:flex-row mx-10">
         <div className="order-2 md:order-1 mt-10">
           <p className="font-italic italic text-xl p-1">HI THERE</p>

@@ -32,8 +32,8 @@ const Footer = () => {
         <div className="flex lg:justify-start mb-4 lg:mb-0">
           <img src={Logo} alt='Logo' className='w-[95px] h-10 ml-4' />
         </div>
-        <div className="flex items-center justify-center lg:justify-start">
-          <p className="text-black">© 2024 CopyRights: Asekona xanywa</p>
+        <div className="flex items-center justify-center lg:justify-center lg:flex-1"> {/* Added lg:flex-1 for responsiveness */}
+          <p className="text-black text-center lg:text-left">© 2024 CopyRights: Asekona xanywa</p> {/* Added text-center class */}
         </div>
       </div>
       {isScrolled && (

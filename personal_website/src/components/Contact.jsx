@@ -59,10 +59,10 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className='w-full py-16 px-4 min- ' style={{ background: 'linear-gradient(to bottom, #f0fae5, #FFFFFF)' }}>
+    <section id="contact" className='w-full h-screen py-16 px-4 min- ' style={{ background: 'linear-gradient(to bottom, #f0fae5, #FFFFFF)' }}>
       <h1 className='text-3xl font-bold mb-8 px-4 text-center'>CONTACT</h1>
       <div className='max-w-4xl mx-auto flex flex-col lg:flex-row'>
-        <div className='bg-[#FFFFFF] w-full lg:w-2/4 rounded-lg p-8 mb-16 lg:mr-8 shadow-md border border-[#ab9dfd] float-right' style={{ marginTop: '20px' }}>
+        <div className='bg-[#FFFFFF] h-[500px] w-full lg:w-2/4 rounded-lg p-8 mb-16 lg:mr-8 shadow-md border border-[#ab9dfd] float-right' style={{ marginTop: '20px' }}>
           <form
             action={FORM_ENDPOINT}
             onSubmit={handleSubmit}
@@ -75,7 +75,7 @@ const Contact = () => {
               <input
                 className='appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline'
                 id='name'
-                name='name' // Add name attribute
+                name='name' 
                 type='text'
                 placeholder='Enter name'
               />
@@ -87,7 +87,7 @@ const Contact = () => {
               <input
                 className='appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline'
                 id='email'
-                name='email' // Add name attribute
+                name='email' 
                 type='email'
                 placeholder='Enter email'
               />
@@ -99,7 +99,7 @@ const Contact = () => {
               <textarea
                 className='appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline'
                 id='message'
-                name='message' // Add name attribute
+                name='message' 
                 placeholder='Send message'
                 rows='4'
               ></textarea>
@@ -116,14 +116,14 @@ const Contact = () => {
           </form>
         </div>
         <div className="flex flex-col justify-center items-start lg:items-end lg:w-1/4 mt-4 lg:mt-0">
-          <FaFileDownload className="text-2xl mb-2 cursor-pointer" />
+          <FaFileDownload size={30} className="text-2xl mb-2 cursor-pointer mt-6 " />
           <div className="flex items-center mb-2">
             <a href="asekona_31187" target="_blank" rel="noopener noreferrer">
-              <FaDiscord className="text-2xl  cursor-pointer" />
+              <FaDiscord size={30} className="text-2xl  cursor-pointer discord-icon mt-6" />
             </a>
           </div>
           <a href="https://www.linkedin.com/in/asekona-xanywa-99b655200/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-2xl cursor-pointer" />
+            <FaLinkedin size={30} className="text-2xl cursor-pointer linkedin-icon mt-6 " />
           </a>
         </div>
       </div>

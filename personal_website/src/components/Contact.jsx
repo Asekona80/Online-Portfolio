@@ -3,18 +3,31 @@ import { FaFileDownload, FaDiscord, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
-  const FORM_ENDPOINT = 'https://public.herotofu.com/v1/f3690a30-cef9-11ee-a1c1-7755cb567bfd'; // Replace 'YOUR_FORM_ENDPOINT' with your actual endpoint URL
+  const FORM_ENDPOINT = 'https://public.herotofu.com/v1/f3690a30-cef9-11ee-a1c1-7755cb567bfd';
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const inputs = e.target.elements;
     const data = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].name) {
-        data[inputs[i].name] = inputs[i].value;
+      const input = inputs[i];
+      if (input.name === 'email') {
+        if (!emailRegex.test(input.value)) {
+          alert('Please enter a valid email address');
+          input.focus();
+          return;
+        }
+      } else {
+        if (input.name && input.value.trim() === '') {
+          alert(`${input.name} cannot be empty`);
+          input.focus();
+          return;
+        }
       }
+      data[input.name] = input.value;
     }
 
     fetch(FORM_ENDPOINT, {
@@ -29,11 +42,9 @@ const Contact = () => {
         if (!response.ok) {
           throw new Error('Form response was not ok');
         }
-
         setSubmitted(true);
       })
       .catch((err) => {
-        // Submit the form manually
         e.target.submit();
       });
   };
@@ -48,10 +59,10 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className='w-full py-16 px-4 min-h-screen' style={{ background: 'linear-gradient(to bottom, #f0fae5, #FFFFFF)' }}>
+    <section id="contact" className='w-full py-16 px-4 min- ' style={{ background: 'linear-gradient(to bottom, #f0fae5, #FFFFFF)' }}>
       <h1 className='text-3xl font-bold mb-8 px-4 text-center'>CONTACT</h1>
       <div className='max-w-4xl mx-auto flex flex-col lg:flex-row'>
-        <div className='bg-[#FFFFFF] w-full lg:w-2/4 rounded-lg p-8 mb-16 lg:mr-8 shadow-md border border-[#ab9dfd] float-right'>
+        <div className='bg-[#FFFFFF] w-full lg:w-2/4 rounded-lg p-8 mb-16 lg:mr-8 shadow-md border border-[#ab9dfd] float-right' style={{ marginTop: '20px' }}>
           <form
             action={FORM_ENDPOINT}
             onSubmit={handleSubmit}

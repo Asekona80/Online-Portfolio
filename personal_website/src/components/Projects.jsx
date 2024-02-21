@@ -31,7 +31,7 @@ const Projects = () => {
     setCurrentSlide((currentSlide - 1 + slide.length) % slide.length);
   };
 
-  const carouselHeight = '50vh'; // Adjust carousel height as needed
+  const carouselHeight = '50vh'; 
   const aspectRatio = 16 / 9;
 
   return (
@@ -47,7 +47,7 @@ const Projects = () => {
             onClick={prevSlide}
             className='text-white px-3 py-1 '
           >
-            <BsChevronLeft size={20} className='bg-gray-800 rounded-full'/> {/* Arrow icon for previous */}
+            <BsChevronLeft size={20} className='bg-gray-800 rounded-full'/> 
           </button>
           <div className="flex space-x-4">
             <a href={slide[currentSlide].github} className="text-gray-600 hover:text-black">
@@ -61,7 +61,7 @@ const Projects = () => {
             onClick={nextSlide}
             className='text-white px-3 py-1 rounded-full mb-4'
           >
-            <BsChevronRight size={20} className='bg-gray-800 rounded-full'/> {/* Arrow icon for next */}
+            <BsChevronRight size={20} className='bg-gray-800 rounded-full'/> 
           </button>
         </div>
       </div>

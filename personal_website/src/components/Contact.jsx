@@ -62,7 +62,7 @@ const Contact = () => {
     <section id="contact" className='w-full h-screen py-16 px-4 min- ' style={{ background: 'linear-gradient(to bottom, #f0fae5, #FFFFFF)' }}>
       <h1 className='text-3xl font-bold mb-8 px-4 text-center'>CONTACT</h1>
       <div className='max-w-4xl mx-auto flex flex-col lg:flex-row'>
-        <div className='bg-[#FFFFFF] h-[500px] w-full lg:w-2/4 rounded-lg p-8 mb-16 lg:mr-8 shadow-md border border-[#ab9dfd] float-right' style={{ marginTop: '20px' }}>
+        <div className='bg-[#FFFFFF] h-[500px] w-[500px] lg:w-2/4 rounded-lg p-8 mb-16 lg:mr-8 shadow-md border border-[#ab9dfd] float-right' style={{ marginTop: '20px' }}>
           <form
             action={FORM_ENDPOINT}
             onSubmit={handleSubmit}

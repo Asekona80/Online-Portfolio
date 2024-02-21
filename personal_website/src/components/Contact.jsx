@@ -119,11 +119,11 @@ const Contact = () => {
           <FaFileDownload size={30} className="text-2xl mb-2 cursor-pointer mt-6 " />
           <div className="flex items-center mb-2">
             <a href="asekona_31187" target="_blank" rel="noopener noreferrer">
-              <FaDiscord size={30} className="text-2xl  cursor-pointer discord-icon mt-6" />
+              <FaDiscord size={30} className="text-2xl  cursor-pointer discord-icon  lg:mt-0" />
             </a>
           </div>
           <a href="https://www.linkedin.com/in/asekona-xanywa-99b655200/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={30} className="text-2xl cursor-pointer linkedin-icon mt-6 " />
+            <FaLinkedin size={30} className="text-2xl cursor-pointer linkedin-icon  lg:mt-0" />
           </a>
         </div>
       </div>

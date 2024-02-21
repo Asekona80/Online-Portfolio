@@ -6,18 +6,18 @@ const Projects = () => {
   const slide = [
     {
       url: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      github: 'https://github.com',
+      github: 'https://github.com/Asekona80/the-Convector',
       demo: '#'
     },
     {
       url: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      github: 'https://github.com',
-      demo: '#'
+      github: 'https://github.com/Asekona80/Kuyasa-Health-services',
+      demo: '#https://keen-tapioca-29c1f9.netlify.app/'
     },
     {
       url: 'https://images.unsplash.com/photo-1577583113753-ca7e95d1bdc6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      github: 'https://github.com',
-      demo: '#'
+      github: 'https://github.com/Asekona80/Game://github.com',
+      demo: '#https://asegame-86928a.netlify.app/'
     }
   ];
 

@@ -12,12 +12,12 @@ const Projects = () => {
     {
       url: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       github: 'https://github.com/Asekona80/Kuyasa-Health-services',
-      demo: '#https://keen-tapioca-29c1f9.netlify.app/'
+      demo: 'https://keen-tapioca-29c1f9.netlify.app/'
     },
     {
       url: 'https://images.unsplash.com/photo-1577583113753-ca7e95d1bdc6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      github: 'https://github.com/Asekona80/Game://github.com',
-      demo: '#https://asegame-86928a.netlify.app/'
+      github: 'https://github.com/Asekona80/Game',
+      demo: 'https://asegame-86928a.netlify.app/'
     }
   ];
 
@@ -35,7 +35,7 @@ const Projects = () => {
   const aspectRatio = 16 / 9;
 
   return (
-    <section id="projects" className='max-w-[1000px]  min-h-screen w-full m-auto py-8 px-4 flex flex-col justify-center items-center'>
+    <section id="projects" className='max-w-[1000px] min-h-screen w-full m-auto py-8 px-4 flex flex-col justify-center items-center'>
       <h1 className="text-3xl font-bold mb-4">PROJECTS</h1>
       <div className="relative" style={{ height: carouselHeight, width: `calc(${carouselHeight} * ${aspectRatio})` }}>
         <div
@@ -64,9 +64,18 @@ const Projects = () => {
             <BsChevronRight size={20} className='bg-gray-800 rounded-full'/> 
           </button>
         </div>
+        <div className="absolute bottom-4 mr-4 mt-4 w-full flex justify-center items-center lg:hidden">
+          <button onClick={prevSlide} className="text-white mx-2 p-2 rounded-full bg-gray-800">
+            <BsChevronLeft size={20} />
+          </button>
+          <button onClick={nextSlide} className="text-white  mx-2 p-2 rounded-full bg-gray-800">
+            <BsChevronRight size={20} />
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Projects;
+                           

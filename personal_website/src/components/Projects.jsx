@@ -47,9 +47,9 @@ const Projects = () => {
             onClick={prevSlide}
             className='text-white px-3 py-1 '
           >
-            <BsChevronLeft size={20} className='bg-gray-800 rounded-full'/> 
+            <BsChevronLeft size={20} className='bg-gray-800 rounded-full mb-[200px]'/> 
           </button>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 mt-[120px]">
             <a href={slide[currentSlide].github} className="text-gray-600 hover:text-black">
               <AiOutlineGithub size={30} />
             </a>
@@ -59,7 +59,7 @@ const Projects = () => {
           </div>
           <button
             onClick={nextSlide}
-            className='text-white px-3 py-1 rounded-full mb-4'
+            className='text-white px-3 py-1 rounded-full mb-[200px]'
           >
             <BsChevronRight size={20} className='bg-gray-800 rounded-full'/> 
           </button>

@@ -9,7 +9,7 @@ const Home = () => {
   const [animationDelayed, setAnimationDelayed] = useState(true);
 
   useEffect(() => {
-    const typingDelay = 200; // Delay between each character (in milliseconds)
+    const typingDelay = 200; 
     const text = ["A POSITIVE", "PASSIONATE", "JUNIOR SOFTWARE DEVELOPER"];
     let index = 0;
     let charIndex = 0;

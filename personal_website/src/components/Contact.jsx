@@ -125,7 +125,10 @@ const Contact = () => {
           </form>
         </div>
         <div className="flex flex-col justify-center items-start lg:items-end lg:w-1/4 mt-4 lg:mt-0">
-          <FaFileDownload size={30} className="text-2xl mb-2 cursor-pointer mt-6 " />
+        <a href="/assets/Asekona_XanywaCV" download="Asekona_XanywaCV.pdf">
+            <FaFileDownload size={30} className="text-2xl mb-2 cursor-pointer mt-6" />
+        </a>
+
           <div className="flex items-center mb-2">
             <a href="asekona_31187" target="_blank" rel="noopener noreferrer">
               <FaDiscord size={30} className="text-2xl  cursor-pointer discord-icon  lg:mt-0" />

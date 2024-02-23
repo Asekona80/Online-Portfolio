@@ -5,48 +5,25 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const FORM_ENDPOINT = 'https://public.herotofu.com/v1/f3690a30-cef9-11ee-a1c1-7755cb567bfd';
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const inputs = e.target.elements;
-    const data = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const formData = new FormData(e.target);
 
-    for (let i = 0; i < inputs.length; i++) {
-      const input = inputs[i];
-      if (input.name === 'email') {
-        if (!emailRegex.test(input.value)) {
-          alert('Please enter a valid email address');
-          input.focus();
-          return;
-        }
-      } else {
-        if (input.name && input.value.trim() === '') {
-          alert(`${input.name} cannot be empty`);
-          input.focus();
-          return;
-        }
-      }
-      data[input.name] = input.value;
-    }
-
-    fetch(FORM_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Form response was not ok');
-        }
-        setSubmitted(true);
-      })
-      .catch((err) => {
-        console.error('Error submitting form:', err);
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: formData,
       });
+
+      if (!response.ok) {
+        throw new Error('Form response was not ok');
+      }
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   if (submitted) {
@@ -64,9 +41,8 @@ const Contact = () => {
       <div className='max-w-4xl mx-auto flex flex-col lg:flex-row'>
         <div className='bg-[#FFFFFF] h-[500px] w-[500px] lg:w-2/4 rounded-lg p-8 mb-16 lg:mr-8 shadow-md border border-[#ab9dfd] float-right' style={{ marginTop: '20px' }}>
           <form
-            action={FORM_ENDPOINT}
             onSubmit={handleSubmit}
-            method="POST"
+            encType="multipart/form-data"
           >
             <div className='mb-4'>
               <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='name'>

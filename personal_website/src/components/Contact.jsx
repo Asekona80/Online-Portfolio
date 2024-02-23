@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { FaFileDownload, FaDiscord, FaLinkedin } from 'react-icons/fa';
-import ReCAPTCHA from  'react-google-recaptcha'
-
-
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const FORM_ENDPOINT = 'https://public.herotofu.com/v1/f3690a30-cef9-11ee-a1c1-7755cb567bfd';
-  const{ recap, setrecap}= useState(null)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,7 +45,7 @@ const Contact = () => {
         setSubmitted(true);
       })
       .catch((err) => {
-        e.target.submit();
+        console.error('Error submitting form:', err);
       });
   };
 
@@ -108,19 +104,14 @@ const Contact = () => {
                 rows='4'
               ></textarea>
             </div>
-            <ReCAPTCHA
-            sitekey='6Lc2u3opAAAAAHVNno1FY5QCfwBFMbnSx90fX6mb'
-           onChange={(val) => setrecap(val)}
-            
-            />
             <div className='flex justify-center lg:justify-start'>
-              <button disabled={!recap}
+              <button
                 className='bg-[#BCB1FF] text-black font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline shadow-md mr-4'
                 type='submit' 
               >
                 Submit
               </button>
-              <input type="text" name="_gotcha" tabindex="-1" autoComplete="off" />
+              <input type="text" name="_gotcha" tabIndex="-1" autoComplete="off" style={{ display: 'none' }} />
             </div>
           </form>
         </div>

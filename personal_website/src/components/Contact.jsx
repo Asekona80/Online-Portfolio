@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { FaFileDownload, FaDiscord, FaLinkedin } from 'react-icons/fa';
 import ReCAPTCHA from  'react-google-recaptcha'
@@ -110,7 +109,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <ReCAPTCHA
-            sitekey='6LeCHX0pAAAAALzAOtZZtrnu6duWZaXqzGD-qISz'
+            sitekey='6LdnK30pAAAAAILzsRn6Pgs83tWeTK6r79Q43U1i'
            onChange={(val) => setrecap(val)}
             
             />

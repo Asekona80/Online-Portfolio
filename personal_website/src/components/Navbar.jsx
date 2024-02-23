@@ -10,7 +10,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth > 768); // Adjust the threshold as needed for desktop width
+      setIsDesktop(window.innerWidth > 768); 
     };
 
     const handleScroll = () => {
@@ -76,6 +76,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+
       <div className="hidden md:flex items-center">
         <button onClick={() => scrollToSection('home')} className='mr-6 hover:text-indigo-400 transition-colors duration-300 ease-in'>
           <span className='p-4'>Home</span>

@@ -1,34 +1,65 @@
+
 import React, { useState } from 'react';
 import { FaFileDownload, FaDiscord, FaLinkedin } from 'react-icons/fa';
+import ReCAPTCHA from  'react-google-recaptcha'
+
+
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const FORM_ENDPOINT = 'https://public.herotofu.com/v1/f3690a30-cef9-11ee-a1c1-7755cb567bfd';
+  const{ recap, setrecap}= useState(null)
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
+    const inputs = e.target.elements;
+    const data = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    try {
-      const response = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (!response.ok) {
-        throw new Error('Form response was not ok');
+    for (let i = 0; i < inputs.length; i++) {
+      const input = inputs[i];
+      if (input.name === 'email') {
+        if (!emailRegex.test(input.value)) {
+          alert('Please enter a valid email address');
+          input.focus();
+          return;
+        }
+      } else {
+        if (input.name && input.value.trim() === '') {
+          alert(`${input.name} cannot be empty`);
+          input.focus();
+          return;
+        }
       }
-
-      setSubmitted(true);
-    } catch (error) {
-      console.error('Error submitting form:', error);
+      data[input.name] = input.value;
     }
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Form response was not ok');
+        }
+        setSubmitted(true);
+      })
+      .catch((err) => {
+        e.target.submit();
+      });
   };
 
   if (submitted) {
     return (
-      console.log('Message sent!')
+      <>
+        <div className="text-2xl">Thank you!</div>
+        <div className="text-md">We'll be in touch soon.</div>
+      </>
     );
   }
 
@@ -38,8 +69,9 @@ const Contact = () => {
       <div className='max-w-4xl mx-auto flex flex-col lg:flex-row'>
         <div className='bg-[#FFFFFF] h-[500px] w-[500px] lg:w-2/4 rounded-lg p-8 mb-16 lg:mr-8 shadow-md border border-[#ab9dfd] float-right' style={{ marginTop: '20px' }}>
           <form
+            action={FORM_ENDPOINT}
             onSubmit={handleSubmit}
-            encType="multipart/form-data"
+            method="POST"
           >
             <div className='mb-4'>
               <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='name'>
@@ -77,14 +109,19 @@ const Contact = () => {
                 rows='4'
               ></textarea>
             </div>
+            <ReCAPTCHA
+            sitekey='6LeCHX0pAAAAALzAOtZZtrnu6duWZaXqzGD-qISz'
+           onChange={(val) => setrecap(val)}
+            
+            />
             <div className='flex justify-center lg:justify-start'>
-              <button
+              <button disabled={!recap}
                 className='bg-[#BCB1FF] text-black font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline shadow-md mr-4'
                 type='submit' 
               >
                 Submit
               </button>
-              <input type="text" name="_gotcha" tabIndex="-1" autoComplete="off" style={{ display: 'none' }} />
+              <input type="text" name="_gotcha" tabindex="-1" autoComplete="off" />
             </div>
           </form>
         </div>
